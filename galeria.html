@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:  black;
+        }
+
+        header {
+            background-color: #333;
+            color: #8d3737;
+            padding: 1em;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 2em;
+        }
+
+        .flex-item {
+            background-color: #f4f4f4;
+            padding: 1em;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1 1 calc(15% - 2em);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .flex-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .flex-item {
+                flex: 1 1 calc(50% - 2em);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .flex-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a nuestra Tienda de Ropa</h1>
+    </header>
+
+    <main>
+
+        <section class="flex-container">
+            <div class="flex-item">
+                <h2>Camisas</h2>
+                <img src="imagenes/camisa1.jpg" alt="Camisas">
+                <p>Descubre nuestra colección de camisas para hombres y mujeres, ideales para cualquier ocasión.</p>
+            </div>
+            <div class="flex-item">
+                <h2>Polos</h2>
+                <img src="imagenes/polo1.jpg" alt="Polos">
+                <p>Explora nuestra variedad de polos, desde los más casuales hasta los más deportivos, diseñados para tu comodidad y estilo.</p>
+            </div>
+            <div class="flex-item">
+                <h2>Pantalones</h2>
+                <img src="imagenes/pantalon.jpg" alt="Pantalones">
+                <p>Encuentra los pantalones perfectos que complementen tu estilo diario, con una amplia gama de colores y tallas disponibles.</p>
+            </div>
+        </section>
+
+    </main>
+    <style>
+
+        .contenedor-slider
+        {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            /*max-width: 1200px;*/
+            padding: 0px 10px;
+            
+        }
+        .slider-izquierdo,.slider-derecho
+        {
+            width: 5%;
+        
+        }
+        .slider-izquierdo img, .slider-derecho img
+        {
+            width: 100%;
+            background-color: rgba(251, 255, 6, 0.952);
+            /*cursor: pointer;*/
+            position: relative;
+            
+            
+        }
+        .slider-screen
+        {
+            width: 90%;
+            
+        }
+        .slider-screen img
+        {
+            width: 100%;
+        }
+        .slider-derecho img:hover{filter: saturate(180%);}
+        .slider-izquierdo img:hover{filter: saturate(180%);}
+        </style>
+        
+        <div class="contenedor-slider">
+            <!-- boton izquierdo-->
+            <div class="slider-izquierdo">
+                <img src="imagenes/izquierdo.png" alt="">
+                
+            </div>
+            <!-- contenedor de todas las imagenes-->
+            <div class="slider-screen">
+                <img name="Imagen">
+            </div>
+            <!-- boton derecho-->
+            <div class="slider-derecho">
+                <img src="imagenes/derecho.png" alt="">
+            </div>
+        </div>
+        <!--probar aqui los dos script efecto.js y efecto2.js-->
+        <script src="efecto2.js"></script>
+
+</body>
+</html>

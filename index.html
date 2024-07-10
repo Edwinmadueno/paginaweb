@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+    
+    <script>
+        $(document).ready(function(){
+            /* efecto para los botones del menú principal */
+            $('#p1').click(function(){
+                $('#contenido').load("inicios.html");
+            });
+            $('#p2').click(function(){
+                $('#contenido').load("nosotros.html");
+            });
+            $('#p3').click(function(){
+                $('#contenido').load("galeria.html");
+            });
+
+            /* efecto para los botones de novedades */
+            $('#p11').click(function(){
+                $('#contenido').load("zapatos.html");
+            });
+            $('#p22').click(function(){
+                $('#contenido').load("camisas.html");
+            });
+            $('#p33').click(function(){
+                $('#contenido').load("polos.html");
+            });
+            $('#p44').click(function(){
+                $('#contenido').load("gorra.html");
+            });
+        });
+    </script>
+    <style>
+        .cabeza {
+            width: 100%;
+            background: antiquewhite;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente los elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+            
+        }
+
+        .cabeza img {
+            max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+        }
+        .cabeza h2 {
+        text-align: right; /* Alinear texto a la derecha */
+        color: rgb(105, 74, 74); /* Color de texto blanco */
+        font-family: 'Times New Roman', Times, serif;
+        margin-right: 20px; /* Ajustar margen derecho para separación del borde */
+        }
+
+        body {
+            background:rgb(22, 22, 22);
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .modificador {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .contenido {
+            width: 100%;
+            height: 500px;
+            color: rgb(22, 26, 24);
+            display: flex;
+            flex-direction: column;
+            min-height: 140vh;
+        }
+
+        .noticia {
+            width: 100%;
+            background: rgb(160, 120, 212);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .novedades {
+            width: 100%;
+            background:rgb(11, 12, 88);
+            text-align: center;
+            margin-bottom: 10px;
+            color: rgb(224, 197, 42); /* Color del texto */
+        }
+
+        .pie {
+            background: #043d5e;
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 1px;
+        }
+
+        .pie h2 {
+            text-align: center;
+            color: rgb(179, 184, 189);
+        }
+
+        .novedades ul {
+            padding: 5px;
+        }
+
+        .novedades ul li {
+            display: block;
+            line-height: 40px;
+        }
+
+        .novedades ul li a {
+            color: rgb(215, 212, 233);
+            font-size: 18px;
+            padding: 5px 5px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .novedades li.active, .novedades li:hover {
+            background: rgb(223, 64, 170);
+            color: blue;
+            transition: .5s;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .modificador {
+                width: 1200px;
+            }
+
+            .noticia {
+                width: 70%;
+                margin-right: 10px;
+            }
+
+            .novedades {
+                width: 29%;
+            }
+
+            .contenido {
+                flex-direction: row;
+                min-height: 80vh;
+            }
+        }
+
+        .menu {
+            background:#043d5e;
+            height: 80px;
+            width: 100%;
+            margin-top: 10px; /* Margen superior */
+        }
+
+        .menu ul {
+            float: right;
+        }
+
+        .menu ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            font-size: 18px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .menu li a.active, .menu li a:hover {
+            background: #a8176c;
+            transition: .5s;
+        }
+
+        .checkbtn { /* estilo del icono responsive */
+            font-size: 30px;
+            color: #fff;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        /* variación de acuerdo al tamaño de pantallas */
+        @media (max-width: 952px) {
+            .menu ul li a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .checkbtn {
+                display: block;
+            }
+
+            .menu ul {
+                position: fixed;
+                width: 80%;
+                height: 58vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            .menu ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            .menu ul li a {
+                font-size: 20px;
+            }
+
+            .menu li a:hover, .menu li a.active {
+                background: none;
+                color: red;
+            }
+
+            #check:checked ~ ul {
+                left: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="cabeza flex modificador">
+        <img src="imagenes/images.jpg" alt="logo dela tienda">
+        <h2>LO MEJOR DE ROPAS URBANAS Y ELEGANTES</h2>
+    </header>
+    <div class="modificador">
+        <nav class="menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="#" id="p1">INICIO</a></li>
+                <li><a href="#" id="p2">NOSOTROS</a></li>
+                <li><a href="#" id="p3">GALERIA</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="contenido flex modificador">
+        <section class="noticia" id="contenido">
+            <h2>NOTICIAS</h2>
+            <p>Somos una empresa comprometida con ofrecerte lo mejor en moda y estilo. En nuestra tienda, encontrarás una amplia selección de productos que reflejan las últimas tendencias y la calidad que nos distingue. ¡Descubre cómo podemos ayudarte a lucir siempre increíble!</p>
+        </section>
+        <aside class="novedades">
+            <h2>NOVEDADES</h2>
+            <ul>
+                <li><a href="#" id="p11">ZAPATOS</a></li>
+                <li><a href="#" id="p22">CAMISAS</a></li>
+                <li><a href="#" id="p33">POLOS</a></li>
+                <li><a href="#" id="p44">GORRA</a></li>
+            </ul>
+        </aside>
+        <footer class="pie  ">
+            <h2>TODOS LOS DERECHOS RESERVADOS</h2>
+        </footer>
+    </main>
+</body>
+</html>

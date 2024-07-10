@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa - Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  black;
+        }
+        header {
+            background-color: #333333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 2em;
+        }
+        .flex-item {
+            background-color: #9d2bd1;
+            padding: 1em;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1 1 calc(25% - 2em);
+            box-shadow: 0 0 10px rgba(99, 89, 89, 0.1);
+        }
+        @media (max-width: 768px) {
+            .flex-item {
+                flex: 1 1 calc(50% - 2em);
+            }
+        }
+        @media (max-width: 480px) {
+            .flex-item {
+                flex: 1 1 100%;
+            }
+        }
+        .flex-item h2 {
+            margin-top: 0;
+        }
+        .flex-item p {
+            margin: 0;
+        }
+        .testimonios {
+            background-color: #1e0c35;
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonios h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .testimonios p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Ropa</h1>
+    </header>
+    <main>
+        <section class="flex-container">
+            <div class="flex-item">
+                <h2>Camisas</h2>
+                <p>Variedad de camisas para todas las ocasiones. Desde formales hasta casuales.</p>
+            </div>
+            <div class="flex-item">
+                <h2>Pantalones</h2>
+                <p>Amplia selección de pantalones para hombre y mujer.</p>
+            </div>
+            <div class="flex-item">
+                <h2>Zapatos</h2>
+                <p>Calzado cómodo y a la moda para cualquier ocasión.</p>
+            </div>
+            <div class="flex-item">
+                <h2>Accesorios</h2>
+                <p>Complementos perfectos para tu outfit, desde gorras hasta cinturones.</p>
+            </div>
+        </section>
+        <section class="testimonios">
+            <h2>Testimonios de Clientes</h2>
+            <p>"Excelente tienda, productos de gran calidad y atención al cliente inmejorable." - Juan Pérez</p>
+            <p>"Me encanta comprar aquí, siempre encuentro lo que busco y más." - María García</p>
+        </section>
+    </main>
+</body>
+</html>

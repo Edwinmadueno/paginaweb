@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos para el título */
+        header h2 {
+            font-family: 'Arial', sans-serif;
+            color: rgb(21, 33, 41);
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgb(233, 233, 233);
+        }
+
+        /* Estilos para pantallas grandes */
+        @media screen and (min-width: 1024px) {
+            .modificador {
+                width: 1200px; /* Ancho fijo de 1200px */
+            }
+            .noticias {
+                width: 70%;
+                margin-right: 10px;
+            }
+            .novedades {
+                width: 29%;
+            }
+        }
+
+        /* Estilos para pantallas pequeñas */
+        @media screen and (max-width: 1024px) {
+            header h2 {
+                font-size: 24px;
+                margin: 15px;
+                padding: 8px;
+            }
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:  black;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .foto-container {
+            width: 45%;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .foto-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .foto-container p {
+            margin-top: 5px;
+            font-size: 16px;
+            color: rgb(21, 33, 41);
+        }
+
+        /* Estilos para la cabecera */
+        header {
+            background: antiquewhite;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cabecera {
+            display: flex;
+            align-items: center; /* Alinea verticalmente el contenido */
+            justify-content: center; /* Alinea horizontalmente el contenido */
+            margin: 0 auto; /* Centrado */
+            max-width: 1200px;
+        }
+
+        .logo {
+            width: 50px; /* Ajusta el ancho del logo según sea necesario */
+            margin-right: 10px; /* Espacio entre el logo y el texto */
+        }
+
+        .header-text {
+            color: rgb(13, 19, 24);
+            text-align: center; /* Centrar texto */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>LAS MEJORES GORRAS ESTÁN AQUÍ</h2>
+    </header>
+    <main>
+        <div class="foto-container">
+            <img src="imagenes/gorra1.jpg" alt="Imagen de gorra deportiva">
+            <p>Descubre nuestra amplia selección de gorras deportivas diseñadas para brindarte comodidad y estilo durante tus actividades físicas.</p>
+        </div>
+        <div class="foto-container">
+            <img src="imagenes/gorra2.jpg" alt="Imagen de gorra casual">
+            <p>Explora nuestras gorras casuales, ideales para complementar tu outfit diario con un toque de frescura y moda.</p>
+        </div>
+        <div class="foto-container">
+            <img src="imagenes/gorra3.jpg" alt="Imagen de gorra de moda">
+            <p>Sumérgete en el mundo de la moda con nuestras exclusivas gorras de diseño, perfectas para destacar tu estilo personal en cualquier ocasión.</p>
+        </div>
+        <div class="foto-container">
+            <img src="imagenes/gorra4.jpg" alt="Imagen de gorra juvenil">
+            <p>Descubre nuestras gorras juveniles, llenas de energía y colores vibrantes que te harán destacar entre tus amigos y compañeros.</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="estiloss.css">
+    <script>
+        $(document).ready(function(){
+            /* efecto para los botones del menú principal */
+            $('#p1').click(function(){
+                $('#contenido').load("inicios.html");
+            });
+            $('#p2').click(function(){
+                $('#contenido').load("nosotros.html");
+            });
+            $('#p3').click(function(){
+                $('#contenido').load("galeria.html");
+            });
+
+            /* efecto para los botones de novedades */
+            $('#p11').click(function(){
+                $('#contenido').load("zapatos.html");
+            });
+            $('#p22').click(function(){
+                $('#contenido').load("camisas.html");
+            });
+            $('#p33').click(function(){
+                $('#contenido').load("polos.html");
+            });
+            $('#p44').click(function(){
+                $('#contenido').load("gorra.html");
+            });
+            $('#p55').click(function(){
+                $('#contenido').load("medias.html");
+            });
+        });
+    </script>
+    <style>
+        .cabeza {
+            width: 100%;
+            background: antiquewhite;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente los elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+            display: flex;
+            align-items: center; /* Alinea verticalmente el contenido */
+            background: antiquewhite;
+            margin: 0 auto; /* Centrado */
+            padding: 10px; /* Espacio interno */
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+
+        .cabeza img {
+            max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+        }
+        .cabeza h2 {
+            text-align: right; /* Alinear texto a la derecha */
+            color: rgb(7, 7, 7); /* Color de texto blanco */
+            font-family: Arial, sans-serif; /* Fuente Arial o sans-serif */
+            margin-right: 20px; /* Ajustar margen derecho para separación del borde */
+        }
+
+        body {
+            background: rgb(22, 22, 22);
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .modificador {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .contenido {
+            width: 100%;
+            height: 500px;
+            color: aliceblue; /* Color del texto */
+            margin: 0 auto; /* Centrado */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Espaciado uniforme entre elementos */
+            min-height: 140vh; /* Altura mínima del contenido */
+        }
+
+        .noticia {
+            width: 100%;
+            background: rgb(160, 120, 212); /* Color de fondo */
+            text-align: center;
+            color: white; /* Color del texto */
+            display: flex; /* Contenedor flexible */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            margin-bottom: 10px; /* Espacio abajo */
+        }
+
+        .novedades {
+            width: 100%;
+            background: rgb(21, 33, 41); /* Color de fondo */
+            color: rgb(213, 235, 14); /* Color del texto */
+            text-align: center; /* Centrar texto */
+            display: flex; /* Contenedor flexible */
+            flex-direction: column; /* Elementos en columna */
+            align-items: center; /* Centrar horizontalmente */
+            justify-content: center; /* Centrar verticalmente */
+            font-family: 'Times New Roman', Times, serif; /* Fuente */
+            margin-top: 10px; /* Espacio arriba */
+        }
+
+        .novedades h2 {
+            margin-bottom: 2px; /* Espacio debajo del título */
+        }
+
+        .novedades a {
+            display: block; /* Mostrar como bloque */
+            width: 80%; /* Ancho del 80% */
+            padding: 10px; /* Espacio interno */
+            margin: 5px 0; /* Espacio arriba y abajo */
+            text-align: center; /* Centrar texto */
+            color: white; /* Color del texto */
+            text-decoration: none; /* Sin subrayado */
+            border-radius: 15px; /* Bordes redondeados */
+            transition: background 1s; /* Transición de color */
+            font-family: 'Times New Roman', Times, serif; /* Fuente */
+        }
+
+        .novedades a:hover {
+            background: rgb(233, 93, 147); /* Cambia el color de fondo al pasar el ratón */
+        }
+
+        .pie {
+            background: rgb(19, 18, 18); /* Color de fondo */
+            width: 100%;
+            margin: 0 auto; /* Centrado */
+            padding-top: 25px; /* Espacio superior */
+            padding-bottom: 25px; /* Espacio inferior */
+        }
+
+        .pie h2 {
+            text-align: center; /* Alinear texto al centro */
+            color: rgb(179, 184, 189); /* Color de texto */
+            font-family: Arial, sans-serif; /* Fuente Arial o sans-serif */
+        }
+
+        .menu {
+            background: rgb(201, 77, 77); /* Color de fondo del menú */
+            height: 80px; /* Altura del menú */
+            width: 100%; /* Ancho completo */
+            margin-top: 10px; /* Margen superior */
+            display: flex; /* Contenedor flexible */
+            align-items: center; /* Alinea elementos verticalmente */
+            justify-content: center; /* Alinea elementos horizontalmente */
+        }
+
+        .menu ul {
+            float: right; /* Alinear a la derecha */
+            margin-right: 20px; /* Margen a la derecha */
+        }
+
+        .menu ul li {
+            display: inline-block; /* Mostrar en línea */
+            line-height: 25px; /* Altura de línea */
+            margin: 5px; /* Margen alrededor */
+        }
+
+        .menu ul li a {
+            color: antiquewhite; /* Color del texto */
+            font-size: 18px; /* Tamaño de fuente */
+            padding: 7px 13px; /* Espacio interno */
+            border-radius: 5px; /* Bordes redondeados */
+            text-transform: uppercase; /* Texto en mayúsculas */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        .menu a.active, .menu li a:hover {
+            background: rgb(225, 228, 225); /* Color de fondo */
+            color: blue; /* Color del texto */
+            transition: .5s; /* Transición */
+        }
+
+        .checkbtn {
+            font-size: 30px; /* Tamaño de fuente del ícono de menú */
+            color: #fff; /* Color del ícono */
+            float: right; /* Flotar a la derecha */
+            line-height: 80px; /* Altura de línea */
+            margin-right: 40px; /* Margen a la derecha */
+            cursor: pointer; /* Cursor de puntero */
+            display: none; /* Ocultar por defecto */
+        }
+
+        @media (max-width: 700px) {
+            .checkbtn {
+                display: block; /* Mostrar el ícono en pantallas pequeñas */
+            }
+
+            .menu ul {
+                position: fixed; /* Posición fija para el menú desplegable */
+                width: 80%; /* Ancho del menú */
+                height: 90vh; /* Altura del menú */
+                background: #2c3e50; /* Color de fondo */
+                top: 80px; /* Posición desde arriba */
+                left: -100%; /* Posición inicial izquierda */
+                text-align: center; /* Centrar texto */
+                transition: all .5s; /* Transición de animación */
+            }
+
+            .menu ul li {
+                display: block; /* Mostrar elementos como bloque */
+                margin: 50px 0; /* Margen superior e inferior */
+                line-height: 30px; /* Altura de línea */
+            }
+
+            .menu ul li a {
+                font-size: 20px; /* Tamaño de fuente */
+            }
+
+            .menu li a:hover, .menu li a.active {
+                background: none; /* Fondo sin color al pasar el ratón */
+                color: red; /* Color de texto al pasar el ratón */
+            }
+
+            #check:checked ~ ul {
+                left: 0; /* Posición desde la izquierda al marcar */
+            }
+        }
+
+        @media (max-width: 800px) {
+            .cabeza img {
+                max-width: 50%; /* Tamaño máximo de imagen al 50% del ancho del contenedor */
+            }
+        }
+
+        .cabeza img {
+            max-width: 50%; /* Ajusta el tamaño máximo de la imagen al 50% del ancho del contenedor */
+        }
+    </style>
+</head>
+<body>
+
+<header class="cabeza">
+    <img src="foto para sitio web.psg" alt="Fotos para encabezar sitio web" class="imagen de encabezar ">
+    <h2>
+        Moda Fashión<br>
+        y Estilo<br>
+        Para todos<br>
+        Toda<br>
+        Ocasión
+    </h2>
+</header>
+
+<nav class="menu">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+        <li><a href="#" class="active">Inicio</a></li>
+        <li><a href="#"> Nosotros </a></li>
+        <li><a href="#"> Galería </a></li>
+        <li><a href="#">Tienda</a></li>
+    </ul>
+</nav>
+
+<br>
+
+<section class="contenido">
+    <article class="novedades">
+        <h2>Noticias Recientes</h2>
+        <a id="p11" href="#">Novedades en Zapatos</a>
+        <a id="p22" href="#">Novedades en Camisas</a>
+        <a id="p33" href="#">Novedades en Polos</a>
+        <a id="p44" href="#">Novedades en Gorra</a>
+        <a id="p55" href="#">Novedades en Medias</a>
+    </article>
+
+    <div class="flex">
+        <div class="modificador">
+            <div class="noticia">
+                <h2>Colores para ropa con Lema y Modelo De: KYLE</h2>
+                <p>La moda siempre será algo importante para todos las personas. Las personas nunca van a quedar en los estilos y también va a querer estar con los colores en ese momento para el vestuario, si desea ver una buena la moda.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="pie">
+    <h2>UNIVERSIDAD CENTRAL DEL ECUADOR</h2>
+    <p>Fernando Caceres Matute y Marco Abad</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
